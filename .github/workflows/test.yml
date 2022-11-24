@@ -1,0 +1,18 @@
+name: CI
+run-name: ${{ github.actor }} is learning GitHub Actions
+on:
+  push:
+  pull_request:
+    branches: [ main ]
+
+# List of custom jobs
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+  # Checks-out our repository under "$GITHUB_WORKSPACE", so our job can access it
+    - name: 'Checkout repository'
+    uses: actions/checkout@v3
+
+  # Runs commands using the runners shell
+    - name: 'Run tests'
+    run: npm install && npm test
