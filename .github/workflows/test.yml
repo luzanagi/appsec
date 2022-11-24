@@ -7,11 +7,11 @@ on:
 
 # List of custom jobs
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: 'Checkout repository'
-    uses: actions/checkout@v3
+  nacho-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout repository'
+      uses: actions/checkout@v3
 
-  # Runs commands using the runners shell
-    - name: 'Run tests'
-    run: npm install && npm test
+      - name: 'Run tests'
+      run: npm install && npm test
