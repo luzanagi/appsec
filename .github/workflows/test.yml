@@ -1,7 +1,7 @@
 # nombre del actions
 name: CI
 # nombre que se va visualizar
-run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: ${{ github.actor }} - ${{github.event_name}}
 on:
   push:
   pull_request:
