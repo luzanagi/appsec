@@ -1,17 +1,22 @@
+# nombre del actions
 name: CI
+# nombre que se va visualizar
 run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   push:
   pull_request:
     branches: [ main ]
 
-# List of custom jobs
+# Lista de jobs
 jobs:
-  nacho-test:
+  #nombre del job
+  jobs-test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: npm install -g bats
+      - run: npm install
+      - run: npm test
+      - run: npm lint
