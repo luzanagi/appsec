@@ -13,13 +13,14 @@ jobs:
   jobs-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14'
+
       - uses: actions/checkout@v3
+
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+          uses: actions/setup-node@v3
+          with:
+            node-version: '12.x'
+
       - run: npm ci
       - name: Run the tests and generate coverage report
           run: npm run test
