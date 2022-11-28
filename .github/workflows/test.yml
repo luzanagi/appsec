@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Run the tests and generate coverage report
-        run: react-scripts test
+        run: npm run react-scripts test
 
       - name: Run the tests and generate coverage report
         run: npm run test
