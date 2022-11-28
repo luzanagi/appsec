@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   console.log('eee')
   const variableAux = 1
-  variableAux = 'eeee'
+  variableAux = 'eeeeeee'
   return (
     <div className="App">
       <header className="App-header">
