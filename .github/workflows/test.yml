@@ -17,6 +17,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '14'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+
       - run: npm ci
       - name: Run the tests and generate coverage report
         run: npm run react-scripts test
