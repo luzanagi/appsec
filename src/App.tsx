@@ -3,11 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const notCommit = false
-  notCommit = 'es un error'
-  console.log('eeeee')
-
-
   return (
     <div className="App">
       <header className="App-header">
