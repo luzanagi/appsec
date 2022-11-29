@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: HOLa  ${{ secrets.GITHUB_TOKEN }}   ${{ secrets.SONAR_TOKEN }}
+      name: HOLa  ${{ secrets.GITHUB_TOKEN }}   ${{ secrets.SONAR_TOKEN }}
       - name: Analyze with SonarCloud
 
         # You can pin the exact commit or the version.
