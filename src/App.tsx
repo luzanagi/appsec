@@ -1,8 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {returnRedunt} from './utils';
 
 function App() {
+  console.log('Test')
+  const variableA = 'hola'
+  const variableSobreEscrita = 'es un string'
+  variableSobreEscrita = 9 + 9
+
+  returnRedunt()
   return (
     <div className="App">
       <header className="App-header">
