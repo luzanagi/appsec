@@ -4,6 +4,7 @@ import './App.css';
 import {pickNumber, returnRedunt, sum, sumar} from './utils';
 
 function App() {
+
   console.log('Test')
   const variableA = 'hola'
   const variableSobreEscrita = 'es un string'
