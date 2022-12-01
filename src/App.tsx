@@ -1,9 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {pickNumber, returnRedunt, sum, sumar} from './utils';
 
 function App() {
-  console.log('eee')
+
+  console.log('Test')
+  const variableA = 'hola'
+  const variableSobreEscrita = 'es un string'
+  variableSobreEscrita = 9 + 9
+let valor1 = 1
+  let valor2 = '2'
+  let valor3 = 3
+  sum(valor1, valor2)
+  sumar(valor1, valor3)
+  returnRedunt()
+  pickNumber()
   return (
     <div className="App">
       <header className="App-header">

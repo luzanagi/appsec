@@ -1,0 +1,28 @@
+# nombre del actions
+name: CI
+# nombre que se va visualizar
+run-name: ${{ github.actor }} - ${{github.event_name}}
+on:
+  pull_request:
+    branches: [ main ]
+
+# Lista de jobs
+jobs:
+  #nombre del job
+  jobs-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - run: npm ci
+
+      - name: Run the tests and generate coverage report
+        run: npm run test
+
+      - name: Run linter
+        run: npm run lint
